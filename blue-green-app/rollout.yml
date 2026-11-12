@@ -18,7 +18,6 @@ spec:
       # immediately before the promotion. If omitted, the default behavior is to promote the new
       # stack as soon as the ReplicaSet are completely ready/available.
       # Rollouts can be resumed using: `kubectl argo rollouts promote ROLLOUT`
-      #
       autoPromotionEnabled: false
   revisionHistoryLimit: 2
   selector:
@@ -31,7 +30,7 @@ spec:
     spec:
       containers:
       - name: webserver-simple
-        image: docker.io/kostiscodefresh/gitops-canary-app:v2.0
+        image: docker.io/kostiscodefresh/gitops-canary-app:v1.0
         ports:
         - name: http
           containerPort: 8080
